@@ -7,7 +7,7 @@ import joblib
 # ---------------------------
 # Load the trained model
 # ---------------------------
-model = joblib.load('car_linear_price.pkl')
+model = joblib.load('carprice_prediction.pkl')
 
 # ---------------------------
 # Streamlit App
@@ -26,9 +26,7 @@ peakrpm = st.number_input("Peak RPM", value=6000, max_value=6600)
 citympg = st.number_input("City MPG", value=37, max_value=49)
 highwaympg = st.number_input("Highway MPG", value=53, max_value=54)
 carwidth = st.number_input('Car Width', value=70.5, max_value=72.3)
-stroke = st.number_input('Stroke', value=3.540, max_value=4.170)
 boreratio = st.number_input('Bore Ratio', value=3.62, max_value=3.94)
-compressionratio = st.number_input('Compression Ratio', value=11.50, max_value=23.00)
 
 
 # Categorical inputs
@@ -63,9 +61,7 @@ input_df = pd.DataFrame({
     'enginelocation': [enginelocation],
     'aspiration': [aspiration],
     'carwidth': [carwidth],
-    'stroke': [stroke],
     'boreratio': [boreratio],
-    'compressionratio': [compressionratio]
 
 })
 
