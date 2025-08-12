@@ -2,9 +2,9 @@
 import streamlit as st
 import pandas as pd
 import pickle
-import joblib
 
-model = joblib.load('model.pkl')
+with open('models.pkl', 'rb') as f:
+    model = pickle.load(f)
 
 st.title("Car Price Prediction App 🚗 ")
 st.write("Enter the car details below to predict its price.")
