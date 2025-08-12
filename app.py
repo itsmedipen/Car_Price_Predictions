@@ -4,14 +4,8 @@ import pandas as pd
 import pickle
 import joblib
 
-# ---------------------------
-# Load the trained model
-# ---------------------------
-model = joblib.load('car_price_prediction.pkl')
+model = joblib.load('model.pkl')
 
-# ---------------------------
-# Streamlit App
-# ---------------------------
 st.title("Car Price Prediction App 🚗 ")
 st.write("Enter the car details below to predict its price.")
 
