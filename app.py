@@ -7,7 +7,7 @@ import joblib
 # ---------------------------
 # Load the trained model
 # ---------------------------
-model = joblib.load('carprice_prediction.pkl')
+model = joblib.load('car_price_prediction.pkl')
 
 # ---------------------------
 # Streamlit App
